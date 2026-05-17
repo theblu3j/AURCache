@@ -17,7 +17,7 @@ FROM --platform=linux/amd64 archlinux/archlinux:latest AS paru_builder
 ARG TARGETARCH
 ARG TARGETVARIANT
 
-RUN pacman -Syu --noconfirm base-devel clang lld rustup distcc
+RUN pacman -Syu --noconfirm base-devel clang lld rustup distcc # should work?
 
 COPY --from=target_sysroot /usr/lib/ /target-sysroot/usr/lib/
 COPY --from=target_sysroot /usr/include/ /target-sysroot/usr/include/
