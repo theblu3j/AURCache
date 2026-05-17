@@ -40,4 +40,4 @@ jobs:
           context: .
           file: ./docker/builder.Dockerfile
           tags: |
-            ghcr.io/lukas-heiligenbrunner/aurcache-builder:latest
+            ghcr.io/theblu3j/aurcache-builder:latest
