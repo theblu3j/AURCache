@@ -18,7 +18,7 @@ sed -i '/^\[options\]/a DisableSandbox' /etc/pacman.conf
 
 # we're gonna need sudo to use the helper properly
 pacman -Syyu --noconfirm
-pacman --sync --needed --noconfirm --noprogressbar pacman-contrib
+pacman --sync --needed --noconfirm --noprogressbar pacman-contrib distcc
 
 # repopulate keychain
 pacman-key --init
