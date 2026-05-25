@@ -10,7 +10,7 @@ FROM --platform=linux/arm/v7 lopsided/archlinux-arm32v7:latest AS arch_armv7
 
 ########## Target sysroot (extract libs for cross-compilation) ##########
 FROM arch_${TARGETARCH}${TARGETVARIANT:+${TARGETVARIANT}} AS target_sysroot
-RUN pacman -Syu --noconfirm gcc
+RUN pacman -Syu --noconfirm gcc distcc
 
 ########## Cross-compile paru on amd64 ##########
 FROM --platform=linux/amd64 archlinux/archlinux:latest AS paru_builder
